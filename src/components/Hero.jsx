@@ -42,6 +42,9 @@ const Hero = () => {
             <a href="#projects" className="btn btn-primary btn-lg">
               View projects <ArrowDownRight size={16} />
             </a>
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg glass-panel">
+              View CV <ArrowUpRight size={16} />
+            </a>
             <a href="mailto:ateebkhan2299@gmail.com" className="btn btn-outline btn-lg glass-panel">
               Contact me <ArrowUpRight size={16} />
             </a>
@@ -51,7 +54,7 @@ const Hero = () => {
             <a href="https://github.com/ateebkhan2299" target="_blank" rel="noreferrer" className="btn-icon">
               <FaGithub size={18} />
             </a>
-            <a href="https://www.linkedin.com/in/ateeb-khan-ak/" target="_blank" rel="noreferrer" className="btn-icon">
+            <a href="https://www.linkedin.com/in/ateeb-khan-0741063a2/" target="_blank" rel="noreferrer" className="btn-icon">
               <FaLinkedin size={18} />
             </a>
             <a href="#" target="_blank" rel="noreferrer" className="btn-icon">
