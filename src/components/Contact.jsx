@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   // TODO: Replace with your actual Web3Forms Access Key
-  const ACCESS_KEY = "ateebkhan2299@gmail.com";
+  const ACCESS_KEY = "3b5b8d1c-b742-449e-b376-be795a630afa";
 
   const [formData, setFormData] = useState({
     name: '',
