@@ -68,12 +68,13 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-        <div className="contact-header">
-          <span className="glass-badge">Contact</span>
-          <h2 className="section-title">Get In <span className="text-primary">Touch</span></h2>
+        <div className="contact-header reveal-up">
+          <span className="glass-badge">Connect</span>
+          <h2 className="section-title">Let's Work <span className="text-primary">Together</span></h2>
+          <p className="section-subtitle">Have a project in mind or looking for a skilled developer? Let's talk.</p>
         </div>
         
-        <div className="contact-container">
+        <div className="contact-container reveal-up delay-200">
           <div className="contact-info glass-panel">
             <h3 className="contact-heading">Let's talk about everything!</h3>
             <p className="contact-subheading">

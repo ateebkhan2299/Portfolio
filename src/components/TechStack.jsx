@@ -22,14 +22,14 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="skills" className="section tech-stack-section">
+    <section id="skills" className="section tech-section">
       <div className="container">
-        <div className="tech-header">
-          <span className="glass-badge">Capabilities</span>
-          <h2 className="section-title">My <span className="text-primary">Tech Stack</span></h2>
+        <div className="tech-header reveal-up">
+          <span className="glass-badge">Skills</span>
+          <h2 className="section-title">Technical <span className="text-primary">Arsenal</span></h2>
         </div>
         
-        <div className="tech-grid">
+        <div className="tech-grid reveal-up delay-200">
           {categories.map((category, idx) => (
             <div key={idx} className="tech-category glass-panel">
               <h3 className="category-title">{category.title}</h3>

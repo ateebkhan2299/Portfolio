@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section section">
       <div className="container hero-container">
-        <div className="hero-content">
+        <div className="hero-content reveal-left">
           <div className="hero-badge">
             <span className="glass-badge">Open to work</span>
           </div>
@@ -78,7 +78,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="hero-image-wrapper">
+        <div className="hero-image-wrapper reveal-right">
           <div className="glass-panel image-card">
             <div className="image-container">
               <img src="/profile.jpg" alt="Ateeb Khan Profile" className="hero-img" />

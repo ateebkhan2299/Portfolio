@@ -29,12 +29,12 @@ const Services = () => {
   return (
     <section id="services" className="section services-section">
       <div className="container">
-        <div className="services-header">
-          <span className="glass-badge">Services</span>
-          <h2 className="section-title">My <span className="text-primary">Services</span></h2>
+        <div className="services-header reveal-up">
+          <span className="glass-badge">What I Do</span>
+          <h2 className="section-title">Specialized <span className="text-primary">Services</span></h2>
         </div>
         
-        <div className="services-grid">
+        <div className="services-grid reveal-up delay-200">
           {servicesList.map((service, idx) => (
             <div key={idx} className="service-card glass-panel">
               <div className="service-icon-wrapper">

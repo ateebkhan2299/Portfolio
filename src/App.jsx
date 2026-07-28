@@ -10,10 +10,14 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
+import { useScrollReveal } from './hooks/useScrollReveal';
 import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  
+  // Initialize global scroll animations
+  useScrollReveal();
 
   // Prevent scrolling while preloader is active
   useEffect(() => {

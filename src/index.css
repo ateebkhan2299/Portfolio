@@ -189,3 +189,38 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   min-height: 100vh;
 }
+
+/* Scroll Reveal Animations */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.revealed {
+  opacity: 1 !important;
+  transform: translate(0) scale(1) !important;
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }

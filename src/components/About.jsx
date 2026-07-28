@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="section about-section">
       <div className="container">
-        <div className="about-header">
+        <div className="about-header reveal-up">
           <span className="glass-badge">About</span>
           <h2 className="section-title">
             Building products with <span className="text-primary">clarity.</span>
@@ -16,7 +16,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="about-grid">
+        <div className="about-grid reveal-up delay-200">
           <div className="about-main-card glass-panel">
             <span className="badge-secondary">About me</span>
             <h3 className="about-main-title">

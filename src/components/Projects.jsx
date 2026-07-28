@@ -52,15 +52,15 @@ const Projects = () => {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <div className="projects-header">
-          <span className="glass-badge">Projects</span>
+        <div className="projects-header reveal-up">
+          <span className="glass-badge">Work</span>
           <h2 className="section-title">Featured <span className="text-primary">Projects</span></h2>
         </div>
         
         <div className="projects-grid">
           {projectsList.map((project, idx) => (
-            <div key={idx} className="project-card glass-panel">
-              <div className="project-header">
+            <div key={idx} className={`project-card glass-panel reveal-up delay-${(idx % 3 + 1) * 100}`}>
+              <div className="project-image-wrapper">
                 <Folder className="project-icon text-primary" size={36} />
                 <div className="project-links">
                   <a href="#" className="project-link" aria-label="GitHub Repository"><FaGithub size={20} /></a>

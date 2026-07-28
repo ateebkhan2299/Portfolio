@@ -1,79 +1,88 @@
 import React from 'react';
+import { Calendar, Briefcase, MapPin } from 'lucide-react';
 import './Experience.css';
 
 const Experience = () => {
+
   const experiences = [
     {
-      role: "Full-Stack Developer",
-      company: "Freelance / Self-Employed",
-      period: "2022 - Present",
-      description: "Developed and deployed multiple full-stack applications including EventSphere and LuxuryStay. Architected scalable backends with Node.js and MongoDB, and built responsive frontends with React and Flutter.",
-      tags: ["MERN", "Flutter", "System Design"]
+      role: "Teaching Associate",
+      company: "Aptech Learning",
+      location: "Shahrah-e-Faisal",
+      period: "Dec 2025 - Present",
+      bullets: [
+        "Deliver hands-on training in MERN Stack, Next.js, and Javascript development.",
+        "Teach authentication systems including JWT, cookies, and OTP verification.",
+        "Assist students in debugging, project structuring, best coding practices, and real-world full-stack workflows."
+      ],
+      tags: ["MERN Stack", "Next.js", "Javascript", "JWT", "OTP"]
     },
     {
-      title: "AI Integration Specialist",
-      company: "Various Projects",
-      period: "2023 - Present",
-      description: "Integrated Google Generative AI and Gemini AI into web and mobile applications to create smart, AI-powered features such as automated data analysis and background workers.",
-      tags: ["Generative AI", "Gemini", "Node.js"]
-    },
-  ];
-
-  const education = [
-    {
-      degree: "Computer Science",
-      institution: "University Name",
-      period: "2018 - 2022",
-      description: "Focus on software engineering, data structures, algorithms, and artificial intelligence."
+      role: "Computer Teacher",
+      company: "Boston Grammar School",
+      location: "",
+      period: "Aug 2025 - Dec 2025",
+      bullets: [
+        "Taught computer fundamentals and programming basics to Grades 3-10.",
+        "Designed engaging lessons, improved student participation, and strengthened digital literacy and logical thinking."
+      ],
+      tags: ["Computing", "Programming", "Digital literacy"]
     }
   ];
 
   return (
     <section id="experience" className="section experience-section">
       <div className="container">
-        <div className="experience-header">
+        <div className="experience-header reveal-up">
           <span className="glass-badge">Journey</span>
           <h2 className="section-title">Experience & <span className="text-primary">Education</span></h2>
         </div>
         
-        <div className="timeline-container">
-          <div className="timeline-column">
-            <h3 className="column-title">Experience</h3>
-            <div className="timeline">
-              {experiences.map((exp, idx) => (
-                <div key={idx} className="timeline-item">
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content glass-panel">
-                    <span className="timeline-period">{exp.period}</span>
-                    <h4 className="timeline-role">{exp.role || exp.title}</h4>
-                    <span className="timeline-company">{exp.company}</span>
-                    <p className="timeline-description">{exp.description}</p>
-                    <div className="timeline-tags">
-                      {exp.tags && exp.tags.map((tag, tIdx) => (
-                        <span key={tIdx} className="timeline-tag">{tag}</span>
-                      ))}
+        <div className="ref-timeline-container">
+          <div className="ref-timeline">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className={`ref-timeline-item reveal-up delay-${(idx + 1) * 100}`}>
+                <div className="ref-timeline-dot"></div>
+                
+                <div className="ref-timeline-content glass-panel">
+                  <div className="ref-card-header">
+                    <h3 className="ref-role-highlight">{exp.role}</h3>
+                    <div className="ref-period-badge">
+                      <Calendar size={14} />
+                      <span>{exp.period}</span>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="timeline-column">
-            <h3 className="column-title">Education</h3>
-            <div className="timeline">
-              {education.map((edu, idx) => (
-                <div key={idx} className="timeline-item">
-                  <div className="timeline-dot"></div>
-                  <div className="timeline-content glass-panel">
-                    <span className="timeline-period">{edu.period}</span>
-                    <h4 className="timeline-role">{edu.degree}</h4>
-                    <span className="timeline-company">{edu.institution}</span>
-                    <p className="timeline-description">{edu.description}</p>
+                  
+                  <div className="ref-meta-row">
+                    <div className="ref-meta-item">
+                      <Briefcase size={14} />
+                      <span>{exp.company}</span>
+                    </div>
+                    {exp.location && (
+                      <div className="ref-meta-item">
+                        <MapPin size={14} />
+                        <span>{exp.location}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <ul className="ref-bullets">
+                    {exp.bullets.map((bullet, bIdx) => (
+                      <li key={bIdx} className="ref-bullet-item">
+                        <span className="ref-bullet-dot"></span>
+                        <span className="ref-bullet-text">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="ref-tags">
+                    {exp.tags.map((tag, tIdx) => (
+                      <span key={tIdx} className="ref-tag">{tag}</span>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
