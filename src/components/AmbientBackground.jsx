@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AmbientBackground.css';
 
 const AmbientBackground = ({ children }) => {
   const canvasRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: '50%', y: '30%' });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -42,8 +43,17 @@ const AmbientBackground = ({ children }) => {
     
     window.addEventListener('resize', resizeHandler);
 
+    const handleMouseMove = (e) => {
+      setMousePos({
+        x: `${(e.clientX / window.innerWidth) * 100}%`,
+        y: `${(e.clientY / window.innerHeight) * 100}%`
+      });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+
     return () => {
       window.removeEventListener('resize', resizeHandler);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -59,7 +69,13 @@ const AmbientBackground = ({ children }) => {
               <stop offset="100%" stopColor="transparent"></stop>
             </radialGradient>
           </defs>
-          <circle cx="50%" cy="30%" r="40%" fill="url(#glow-gradient)"></circle>
+          <circle 
+            cx={mousePos.x} 
+            cy={mousePos.y} 
+            r="40%" 
+            fill="url(#glow-gradient)"
+            style={{ transition: 'cx 0.1s ease-out, cy 0.1s ease-out' }}
+          ></circle>
         </svg>
       </div>
       <div className="ambient-grain"></div>
